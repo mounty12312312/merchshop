@@ -17,7 +17,7 @@ bot.onText(/\/start/, (msg) => {
                 [
                     {
                         text: 'Открыть Mini App',
-                        web_app: { url: 'http://https://mounty12312312.github.io/merchshop/' } // Замените на URL вашего приложения
+                        web_app: { url: 'https://mounty12312312.github.io/merchshop/' } // Замените на URL вашего приложения
                     }
                 ]
             ]
