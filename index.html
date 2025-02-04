@@ -1,43 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Telegram Mini App</title>
+    <title>Мерч Самокат</title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 50px;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-    </style>
 </head>
 <body>
-    <h1>Привет! Это ваше первое Telegram Mini App!</h1>
-    <button id="getUserData">Получить данные пользователя</button>
-    <div id="userData"></div>
+    <header>
+        <h1>Мерч Самокат</h1>
+        <div id="balance">Баланс: загрузка...</div>
+    </header>
 
-    <script>
-        document.getElementById('getUserData').addEventListener('click', function() {
-            // Получаем данные пользователя из Telegram Web App API
-            const user = window.Telegram.WebApp.initDataUnsafe.user;
+    <main>
+        <section id="products">
+            <h2>Товары</h2>
+            <ul id="product-list"></ul>
+        </section>
+    </main>
 
-            if (user) {
-                document.getElementById('userData').innerHTML = `
-                    <p>Имя: ${user.first_name}</p>
-                    <p>Фамилия: ${user.last_name || 'Не указана'}</p>
-                    <p>Имя пользователя: @${user.username || 'Не указано'}</p>
-                `;
-            } else {
-                document.getElementById('userData').innerText = 'Данные пользователя недоступны';
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
